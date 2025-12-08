@@ -4,3 +4,6 @@ Anna 30
 Jan 26
 Marek 60
 Jakub 27
+Kuba Kowalski 30
+Kuba Nowak 30
+Mateusz KOwalski 20

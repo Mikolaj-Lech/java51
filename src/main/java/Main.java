@@ -11,8 +11,10 @@ import java.io.IOException;
 import java.util.Scanner;
 
 class Main {
-  public static void main(String[] args) {
-    try {
+  public static void main(String[] args) 
+  {
+    try 
+      {
       Service s = new Service();
       Scanner scanner = new Scanner(System.in);
 
@@ -29,11 +31,15 @@ class Main {
                 System.out.println("Podaj imie studenta");
                 String name = scanner.nextLine();
 
+                System.out.println("Podaj nazwisko studenta");
+                String surname = scanner.nextLine();
+
                 System.out.println("Podaj wiek studenta");
                 int age = scanner.nextInt();
 
-                s.addStudent(new Student(name,age));
-            break;             
+                s.addStudent(new Student(name,surname,age));
+            break;     
+                
 
             case 2:
                 System.out.println("Lista studentow");
@@ -50,20 +56,13 @@ class Main {
                 scanner.close();
                 System.exit(0);
             break;
-            }
-                
+            }       
         }
-      
-      
-      
-      
-
       // var students = s.getStudents();
       // for(Student current : students) {
       //   System.out.println(current.ToString());
       // }
-    } catch (IOException e) {
-
-    }
+    } catch (IOException e) 
+      {}
   }
 }
