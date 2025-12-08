@@ -18,9 +18,10 @@ class Main {
 
       while(true)
         {
-          System.out.println("1. Dodaj nowego studenta 0. Wyjscie z aplikacji");
+          System.out.println("1. Dodaj nowego studenta.   2.Wyświetl studentów.    0. Wyjscie z aplikacji");
           int wybor = scanner.nextInt();
           scanner.nextLine();
+          System.out.println("");
 
           switch(wybor)
             {
@@ -32,7 +33,17 @@ class Main {
                 int age = scanner.nextInt();
 
                 s.addStudent(new Student(name,age));
-            break;              
+            break;             
+
+            case 2:
+                System.out.println("Lista studentow");
+                var students = s.getStudents();
+                for(Student current : students) 
+                {
+                  System.out.println(current.ToString());
+                }
+            break;
+                
 
             case 0:
                 System.out.println("Koniec programu");
