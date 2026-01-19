@@ -68,4 +68,49 @@ public class Service
   }
   
   }
+
+  public Collection<Student> deleteStudentByName(String name)
+  {
+      try
+      {
+          var ret = new ArrayList<Student>();
+          var result = new ArrayList<Student>();
+          var f = new FileReader("db.txt");
+          var reader = new BufferedReader(f);
+          String line = "";
+          while (true) {
+              line = reader.readLine();
+              if(line == null)
+                  break;
+              ret.add(Student.Parse(line));
+          }
+          reader.close();
+
+          
+          for(Student current : ret)
+          {
+              if(!current.GetName().equals(name)) 
+              {
+                  result.add(current);
+              }
+          }
+
+          
+          var writer = new BufferedWriter(new FileWriter("db.txt"));
+          for(Student s : result)
+          {
+              writer.write(s.ToString());
+              writer.newLine();
+          }
+          writer.close();
+
+          return result;
+
+      }
+      catch (IOException e)
+      {
+          return new ArrayList<Student>();
+      }
+  }
+
 }
