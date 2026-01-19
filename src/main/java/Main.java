@@ -18,12 +18,16 @@ class Main {
       Service s = new Service();
       Scanner scanner = new Scanner(System.in);
 
+      
+
+      
       while(true)
         {
-          System.out.println("1. Dodaj nowego studenta.   2.Wyświetl studentów.    0. Wyjscie z aplikacji");
+          System.out.println("1. Dodaj nowego studenta.   2.Wyświetl studentów.  3.Znalezienie studenta po imieniu  0. Wyjscie z aplikacji");
           int wybor = scanner.nextInt();
           scanner.nextLine();
           System.out.println("");
+          
 
           switch(wybor)
             {
@@ -53,7 +57,16 @@ class Main {
                   System.out.println(current.ToString());
                 }
             break;
-                
+
+            case 3:
+                System.out.println("Podaj imie studenta");
+                String name2=scanner.nextLine();
+                var students1= s.findStudentByName(name2);
+                for(Student current : students1)
+                  {
+                    System.out.println(current.ToString());
+                  }
+            break;
 
             case 0:
                 System.out.println("Koniec programu");

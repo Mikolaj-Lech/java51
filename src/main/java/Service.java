@@ -5,7 +5,8 @@ import java.io.BufferedWriter;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-public class Service {
+public class Service 
+{
 
   public void addStudent(Student student) throws IOException 
   {
@@ -32,10 +33,39 @@ public class Service {
     return ret;
   }
 
-  public Student findStudentByName(String name) 
+  public Collection<Student> findStudentByName(String name) 
   {
-  
-    return null;
+    try
+      {
+      var ret = new ArrayList<Student>();
+      var result = new ArrayList<Student>();
+      var f = new FileReader("db.txt");
+      var reader = new BufferedReader(f);
+      String line = "";
+      while (true) {
+        line = reader.readLine();
+        if(line == null)
+          break;
+        ret.add(Student.Parse(line));
+      }
+    
+
+    for(Student current : ret)
+      {
+        if(current.GetName().equals(name))
+        {
+          result.add(current);
+        }
+      }
+    reader.close();
+    return result;
  
+    }
+  
+  catch (IOException e)
+  {
+    return new ArrayList<Student>();
+  }
+  
   }
 }
