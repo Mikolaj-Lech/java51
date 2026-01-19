@@ -23,7 +23,7 @@ class Main {
       
       while(true)
         {
-          System.out.println("1. Dodaj nowego studenta.   2.Wyświetl studentów.  3.Znalezienie studenta po imieniu 4.Usuwanie studenta 0. Wyjscie z aplikacji");
+          System.out.println("1. Dodaj nowego studenta.   2.Wyświetl studentów.  3.Znalezienie studenta po imieniu 4.Usuwanie studenta 5.Aktualizacja wieku 0. Wyjscie z aplikacji");
           int wybor = scanner.nextInt();
           scanner.nextLine();
           System.out.println("");
@@ -77,6 +77,17 @@ class Main {
                         System.out.println(current.ToString());
                       }
             break;
+
+            case 5:
+                System.out.println("Podaj imie studenta");
+                String name4=scanner.nextLine();
+                var students3= s.updateStudentByName(name4);
+                for(Student current : students3)
+                    {
+                      System.out.println(current.ToString());
+                    }
+              break;
+                
 
             case 0:
                 System.out.println("Koniec programu");
