@@ -37,7 +37,11 @@ class Main {
                 System.out.println("Podaj wiek studenta");
                 int age = scanner.nextInt();
 
-                s.addStudent(new Student(name,surname,age));
+                System.out.println("Podaj date urodzenia studenta");
+                String dateOfBirth = scanner.nextLine();
+                dateOfBirth = scanner.nextLine();
+
+                s.addStudent(new Student(name,surname,age,dateOfBirth));
             break;     
                 
 

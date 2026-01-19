@@ -7,3 +7,7 @@ Jakub 27
 Kuba Kowalski 30
 Kuba Nowak 30
 Mateusz KOwalski 20
+Jan Kowalski 20 
+Jan Kowalski 20 
+Jan KOwaslki 20 scanner.nextLine();
+Jan Kowaslki 20 2000-01-20
