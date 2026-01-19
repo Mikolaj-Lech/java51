@@ -34,20 +34,8 @@ public class Service {
 
   public Student findStudentByName(String name) 
   {
-  //   var ret = new ArrayList<Student>();
-  //   var f = new FileReader("db.txt");
-  //   var reader = new BufferedReader(f);
-  //   String line = "";
-  //   while (true) {
-  //     line = reader.readLine();
-  //     if(line == null)
-  //       break;
-  //     ret.add(Student.Parse(line));
-  //   }
-  //   reader.close();
-  //   return Student("0","0","0","0");
-
-    
-  // }
-    
+  
+    return null;
+ 
+  }
 }
